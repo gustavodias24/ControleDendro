@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/edtIp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Ip do equipamento Dendro 192.168."
+        android:inputType="number|numberDecimal|text"
+        android:numeric="decimal"
+        app:layout_constraintEnd_toStartOf="@+id/saveIp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mask="192.168.**********" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O ip está localizado dentro do  aplicativo Dendro!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtIp" />
+
+    <ImageButton
+        android:id="@+id/maisRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/plusred" />
+
+    <ImageButton
+        android:id="@+id/maisYellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/plusyelow" />
+
+    <ImageButton
+        android:id="@+id/menosYellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maisYellow"
+        app:layout_constraintVertical_bias="0.17000002"
+        app:srcCompat="@drawable/minusyelow" />
+
+    <ImageButton
+        android:id="@+id/menosRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maisRed"
+        app:layout_constraintVertical_bias="0.17000002"
+        app:srcCompat="@drawable/negativered" />
+
+    <ImageButton
+        android:id="@+id/saveIp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_save_24" />
+
+    <ImageButton
+        android:id="@+id/maisZoom"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@+id/menosRed"
+        app:layout_constraintTop_toBottomOf="@+id/maisRed"
+        app:srcCompat="@drawable/baseline_zoom_in_24" />
+
+    <ImageButton
+        android:id="@+id/menosZoom"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/menosYellow"
+        app:layout_constraintTop_toBottomOf="@+id/maisYellow"
+        app:srcCompat="@drawable/baseline_zoom_out_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
